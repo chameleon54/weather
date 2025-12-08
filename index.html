@@ -3,24 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Cuaca</title>
+    <title>Aplikasi Cuaca Animasi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Aplikasi Cuaca</h1>
-        <div class="input-group">
-            <input type="text" id="city" placeholder="Masukkan nama kota" />
-            <button id="getWeather">Cari</button>
+    <div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+        <div class="splash-logo">☀️</div>
+
+        <div class="dots-loader">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
-        <div id="weather" class="hidden">
-            <h2 id="location"></h2>
-            <p id="temperature"></p>
-            <p id="description"></p>
-            <img id="icon" alt="Ikon Cuaca" />
-        </div>
+        <p class="splash-text">Loading…</p>
     </div>
+    </div>
+
+
+
+    <div class="container fade-in">
+        <h1>Aplikasi Cuaca</h1>
+
+        <div class="input-group">
+            <input type="text" id="city" placeholder="Masukkan nama kota">
+            <button id="getWeather">Cari</button>
+        </div>
+        <ul id="suggestions" class="suggestions hidden"></ul>
+
+        <p id="loading" class="hidden">⏳ Mengambil data...</p>
+
+        <!-- Weather Card -->
+        <div id="weatherCard" class="weather-card hidden">
+            <div class="weather-animation" id="weatherAnimation"></div>
+            <div class="particle-layer" id="particleLayer"></div>
+
+            <div class="weather-info">
+                <h2 id="location"></h2>
+                <h1 id="temperature"></h1>
+                <p id="description"></p>
+                <p id="feels"></p>
+                <p id="humidity"></p>
+                <p id="wind"></p>
+            </div>
+        </div>
+        <canvas id="tempChart" class="hidden"></canvas>
+        <div id="hourlyContainer" class="hourly-container hidden">
+        <h3>Cuaca Per Jam</h3>
+        <div id="hourlyScroll" class="hourly-scroll"></div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
