@@ -1,4 +1,4 @@
-# ☀️ Aplikasi Cuaca Animasi
+# ☀️ Aplikasi Cuaca 
 A simple and modern Weather App built with **HTML, CSS, and JavaScript**, featuring animated weather effects, hourly forecast, autosuggest city search, and a minimalist splash screen.
 
 This project uses the **OpenWeather API** to fetch real-time weather information.
